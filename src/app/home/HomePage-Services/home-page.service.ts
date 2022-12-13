@@ -20,7 +20,7 @@ export class HomePageService {
 
   //Getting the Products from backend API
   getProducts():Observable<IProduct[]>{
-    let tempVar = this.http.get<IProduct[]>('https://backendappservice-team2-namratha.azurewebsites.net/api/home/getproducts')
+    let tempVar = this.http.get<IProduct[]>('https://quick-kart-backend-team2-nagaraj.azurewebsites.net/api/home/getproducts')
     console.log(tempVar)
     return tempVar
   }
@@ -29,7 +29,7 @@ export class HomePageService {
   
     console.log(emailID)
 
-    let tempVar = this.http.get<boolean>('https://backendappservice-team2-namratha.azurewebsites.net/api/Customer/AddNewSubscriber?emailID='+emailID)
+    let tempVar = this.http.get<boolean>('https://quick-kart-backend-team2-nagaraj.azurewebsites.net/api/Customer/AddNewSubscriber?emailID='+emailID)
     console.log(tempVar)
     return tempVar
   }
